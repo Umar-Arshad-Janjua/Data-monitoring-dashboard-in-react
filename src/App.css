@@ -1,4 +1,4 @@
-/* Set body background and font color */
+
 body, html {
   background-color: #121212;
   color: #ffffff;
@@ -11,12 +11,12 @@ body, html {
 
 .App {
   text-align: center;
-  background-color: #121212; /* Set background for app */
-  color: #ffffff; /* Set font color for app */
+  background-color: #121212; 
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffff; /* Headings should use the font color */
+  color: #ffffff;
 }
 
 
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: white;
 }
-/* Chart container styling */
+
 .chart-container {
   background-color: #2e2e2e;
   padding: 20px;
