@@ -1,0 +1,106 @@
+/* Base Navbar Styling */
+.navbar {
+    background-color: #121212; /* Dark theme background */
+    color: #ffffff; /* White font color */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is on top of other elements */
+}
+
+/* Add the thin, thread-like line using a gradient in the ::after pseudo-element */
+.navbar::after {
+    content: '';
+    display: block;
+    width: 70%; /* 70% width of the navbar */
+    height: 1px; /* Make the line very thin like a thread */
+    margin: 0 auto; /* Center the line */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,   /* Start transparent */
+        rgba(255, 255, 255, 0.8) 50%, /* Peak white in the center */
+        rgba(255, 255, 255, 0) 100%  /* End transparent */
+    ); /* Create gradient effect from transparent to white and back */
+    padding-bottom: 2px; /* Small spacing below the line */
+}
+
+/* Container to limit the navbar's width and center it */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Left-aligned text */
+.navbar-left h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Right-aligned buttons */
+.navbar-right {
+    display: flex;
+    gap: 30px; /* Space between buttons */
+}
+
+/* Buttons in the navbar */
+.navbar-btn {
+    color: #b0b0b0; /* Light gray for inactive buttons */
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.navbar-btn:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Active button state */
+.navbar-btn.active {
+    color: #dc2d25; /* Red color for the active button */
+    font-weight: bold; /* Bold active button for emphasis */
+}
+
+/* Hamburger icon for mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Responsive Navbar for small screens */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #121212;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid #333;
+    }
+
+    .navbar-right.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

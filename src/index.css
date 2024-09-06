@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Global overflow handling */
+html, body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+/* Customize scrollbar width and color for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;  /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;  /* Background of the scrollbar track (same as the dark theme) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dc2d25;  /* Red color for the scrollbar thumb */
+  border-radius: 10px;  /* Rounded corners for the scrollbar */
+}
+
+/* Customize hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff4d4d;  /* Lighter red on hover */
+}
+
+/* Customize scrollbar for other browsers */
+html {
+  scrollbar-width: thin;  
+  scrollbar-color: #dc2d25 #121212; 
+}
