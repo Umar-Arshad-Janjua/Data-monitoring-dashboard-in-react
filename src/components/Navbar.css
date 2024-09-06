@@ -1,31 +1,31 @@
-/* Base Navbar Styling */
+
 .navbar {
-    background-color: #121212; /* Dark theme background */
-    color: #ffffff; /* White font color */
+    background-color: #121212; 
+    color: #ffffff; 
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure navbar is on top of other elements */
+    z-index: 1000; 
 }
 
-/* Add the thin, thread-like line using a gradient in the ::after pseudo-element */
+
 .navbar::after {
     content: '';
     display: block;
-    width: 70%; /* 70% width of the navbar */
-    height: 1px; /* Make the line very thin like a thread */
-    margin: 0 auto; /* Center the line */
+    width: 70%; 
+    height: 1px; 
+    margin: 0 auto; 
     background: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0) 0%,   /* Start transparent */
-        rgba(255, 255, 255, 0.8) 50%, /* Peak white in the center */
-        rgba(255, 255, 255, 0) 100%  /* End transparent */
-    ); /* Create gradient effect from transparent to white and back */
-    padding-bottom: 2px; /* Small spacing below the line */
+        rgba(255, 255, 255, 0) 0%,  
+        rgba(255, 255, 255, 0.8) 50%, 
+        rgba(255, 255, 255, 0) 100%  
+    ); 
+    padding-bottom: 2px;
 }
 
-/* Container to limit the navbar's width and center it */
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -36,7 +36,7 @@
     box-sizing: border-box;
 }
 
-/* Left-aligned text */
+
 .navbar-left h1 {
     margin: 0;
     font-size: 1.8rem;
@@ -44,33 +44,33 @@
     color: #ffffff;
 }
 
-/* Right-aligned buttons */
+
 .navbar-right {
     display: flex;
-    gap: 30px; /* Space between buttons */
+    gap: 30px; 
 }
 
-/* Buttons in the navbar */
+
 .navbar-btn {
-    color: #b0b0b0; /* Light gray for inactive buttons */
+    color: #b0b0b0; 
     font-size: 1.1rem;
     text-decoration: none;
     padding: 10px;
     transition: color 0.3s ease;
 }
 
-/* Hover effect for buttons */
+
 .navbar-btn:hover {
-    color: #ffffff; /* White on hover */
+    color: #ffffff; 
 }
 
-/* Active button state */
+
 .navbar-btn.active {
-    color: #dc2d25; /* Red color for the active button */
-    font-weight: bold; /* Bold active button for emphasis */
+    color: #dc2d25; 
+    font-weight: bold; 
 }
 
-/* Hamburger icon for mobile */
+
 .menu-toggle {
     display: none;
     background: none;
@@ -81,7 +81,7 @@
     margin-right: 20px;
 }
 
-/* Responsive Navbar for small screens */
+
 @media (max-width: 768px) {
     .navbar-right {
         display: none;
